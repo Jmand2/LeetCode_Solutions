@@ -1,19 +1,23 @@
 package com.company;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class IntToRomanTest {
 
     @Test
-    void numberOfDuplicatesEmptyList() {
-        IntToRoman.intToRoman(12);
+    void basicTest() {
         assertEquals(IntToRoman.intToRoman(12), "XII");
+    }
+
+    @Test
+    void emptyTest() {
+        assertEquals(IntToRoman.intToRoman(0), "");
+    }
+
+    @Test
+    void largeTest() {
+        assertEquals(IntToRoman.intToRoman(2493), "MMCDXCIII");
     }
 }
